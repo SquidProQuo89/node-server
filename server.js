@@ -29,14 +29,14 @@ app.use((req, res, next) => {
 	next();
 });
 
-// since this doesn't end with a next() function, nothing below will execute
-// if the app.use(express.static(__dirname + '/public')); is above this line
-// the public dir will still be accessible. something to keep in mind.
-app.use((req, res, next) => {
-	res.render('maintenance.hbs', {
-		pageTitle: 'Maintenance page',
-	});
-});
+// // since this doesn't end with a next() function, nothing below will execute
+// // if the app.use(express.static(__dirname + '/public')); is above this line
+// // the public dir will still be accessible. something to keep in mind.
+// app.use((req, res, next) => {
+// 	res.render('maintenance.hbs', {
+// 		pageTitle: 'Maintenance page',
+// 	});
+// });
 
 // Syntax to add middleware. Needs absolute path, only needs to
 // point to the root directory of your static files.
