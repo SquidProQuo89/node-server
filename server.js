@@ -83,6 +83,11 @@ app.get('/about', (req, res) => {
 	});
 });
 
+app.get('/projects', (req, res) => {
+	res.render('projects.hbs', {
+		pageTitle: 'Project page'
+	});
+});
 // one way to send a static response
 // app.get('/about', (req, res) => {
 // 	res.send('<h1>What you talkin about willis</h1>');
